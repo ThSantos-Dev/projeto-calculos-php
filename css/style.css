@@ -1,0 +1,390 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    overflow-x: hidden;
+}
+
+
+body .container{
+    height: calc(100vh - 60px);
+    padding-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    overflow-x: hidden;
+
+    background: rgb(0,0,0);
+    background: linear-gradient(176deg, rgba(0,0,0,0.9335038363171355) 0%, rgba(37,161,154,0.8721227621483376) 100%);
+    
+}
+
+header{
+    min-width: 650px;
+
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    height: 60px;
+}
+
+header h1 {
+    line-height: 60px;
+}
+
+#container-imgs {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.index-container {
+    flex: 1 0 400px;
+}
+
+.index-container img{
+    width: 100%;
+    object-fit: cover;
+}
+
+#conteudo {
+    width: 500px;
+    height: auto;
+    border: 1px solid #000;
+    background: #fff
+}
+
+#par-impar #conteudo {
+    width: 700px;
+    height: auto;
+    border: 1px solid #000;
+
+    background: #fff
+}
+
+#titulo {
+    text-align: center;
+    color: #fff;
+    font-family: verdana, arial, helvetica;
+
+    padding: 20px;
+    margin-bottom: 15px;
+    background-color: rgb(19, 23, 24);
+}
+
+/* Form Media.php */
+#media #form form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#media form > div {
+    width: 80%;
+
+    display: flex;
+    flex-direction: row;
+    
+    font-size: 1.6em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+    margin: 15px auto;
+}
+
+#media form div input[type="text"] {
+    flex: 3 1 200px;
+    font-size: 20px;
+
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+#media form div:nth-last-child(1) {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.4em;
+}
+
+#media form div:nth-last-child(1) input {
+    padding: 0 25px;
+    font-size: 0.8em;
+}
+
+#media form div:nth-last-child(1) div > a {
+    display: block;
+    padding: 10px;
+
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #000;
+    background-color: rgba(226, 73, 73, 0.849);
+}
+
+#media #resultado {
+    width: 60%;
+    margin: 20px auto;
+    padding: 20px;
+
+    text-align: center;
+    font-size: 1.8em;
+    font-family: 'Times New Roman', Times, serif;
+
+    border: 1px solid #000;
+}
+/* // -- Form Media.php */
+
+/* Form Calculadora.php */
+#calculadora form {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-areas: "input-valores input-valores  calcular"
+                         "operacoes     resultado      resultado"  ;
+    grid-gap: 20px;
+    padding: 10px;
+
+}
+#calculadora form > div{
+    align-self: end;
+    background-color: #fff;
+}
+
+#calculadora #input-text {
+    grid-area: input-valores;
+
+    font-size: 1.6em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+#calculadora #input-text input[type="text"]{
+    grid-area: input;
+    margin-bottom: 10px;
+
+    text-indent: 10px;
+    font-size: 18px;
+
+}
+
+#calculadora #container_opcoes {
+    grid-area: operacoes;
+
+    font-size: 1.6em;
+    font-family: 'Times New Roman', Times, serif;
+}
+#calculadora #container_opcoes input[type="radio"] {
+    margin-top: 10px;
+    margin-right: 10px;
+    height: 15px;
+    width: 15px; 
+}
+
+#calculadora #btnCalc{
+    grid-area: calcular;
+    align-self: center;
+}
+
+#calculadora #btnCalc input, #par-impar  #btnCalc input, #tabuada #btnCalc input{
+    
+    padding: 10px;
+    font-size: 1em;
+}
+
+#calculadora #resultado {
+    grid-area: resultado;
+    grid-column: 2 / 6;
+    justify-content: stretch;
+    align-self: stretch;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    font-size: 1.6em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    border: 1px solid #000;
+}
+/* // -- Form Calculadora.php */
+
+/* Form Par-Impar.php */
+#par-impar form{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    grid-template-areas: "sltInicial . btnCalc"
+                         "sltFinal   . btnCalc"
+    
+    ;
+    gap: 20px;
+    
+    font-family: 'Times New Roman', Times, serif;
+
+    padding-left: 40px;
+    margin-bottom: 40px;
+
+}
+
+#par-impar form #container-sltInicial {
+    grid-area: sltInicial;
+    grid-column: 1 / 3;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;    
+    justify-content: start;
+
+    font-size: 1.6em;
+}
+
+#par-impar form #container-sltFinal {
+    grid-area: sltFinal;
+    grid-column: 1 / 3;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    font-size: 1.6em;
+}
+
+#par-impar form #container-sltInicial select, 
+    #par-impar form #container-sltFinal  select{
+    grid-column: 2 / 3 ;
+    padding: 0;
+
+    
+    text-align: center;
+}
+
+#par-impar form #btnCalc {
+    grid-area: btnCalc;
+    align-self: center;
+    justify-self: start;
+}
+
+#par-impar #resultado {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 40px;
+
+    padding: 10px;
+    
+}
+
+#par-impar #resultado #container-pares,
+ #par-impar #resultado #container-impares{
+    width: 300px;
+
+}
+
+#par-impar #resultado #container-pares h2,
+ #par-impar #resultado #container-impares h2{
+    margin-bottom: 15px;
+
+}
+
+.span  {
+    width: 100%;
+    height: 350px;
+    margin-bottom: 20px;
+    padding: 10px;
+
+    font-size: 1.5em;
+    text-align: center;
+    border: 1px solid #000;
+
+    overflow-y: auto;
+}
+
+.quantidade-span {
+    font-size: 1.3em;
+    font-family: 'Times New Roman', Times, serif;
+}
+/* // -- Form Par-Impar.php */
+
+/* Form para Tabuada.php */
+#tabuada form  {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    grid-template-areas: "tabuada    . btnCalc"
+                         "contador   . btnCalc"
+    
+    ;
+    gap: 10px  30px;
+    
+    font-family: 'Times New Roman', Times, serif;
+    padding-left: 40px;
+    margin-bottom: 40px;
+}
+
+#tabuada form #container-tabuada {
+    grid-area: tabuada;
+    grid-column: 1 / 3;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;    
+
+
+    font-size: 1.6em;
+}
+#tabuada form #container-contador {
+    grid-area: contador;
+    grid-column: 1 / 3;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+
+
+    font-size: 1.6em;
+}
+
+
+
+#tabuada form #container-tabuada input, 
+    #tabuada form #container-contador  input{
+    grid-column: 2/4 ;
+    height: 30px;
+    justify-self: end;
+    align-self: end;
+
+    text-indent: 10px;
+
+} 
+#tabuada form #container-tabuada label, 
+    #tabuada form #container-contador label{
+    grid-column: 1 / 2 ;
+    align-self: end;
+    justify-self: start;
+    padding: 0;
+
+} 
+
+#tabuada #btnCalc {
+    grid-row: 1/4;
+
+    justify-self: center;
+    align-self: center;
+}
+
+#tabuada #resultado {
+    padding-bottom: 40px;
+}
+
+#tabuada .span {
+    max-width: 350px;
+    margin: 0 auto;
+    text-align: left;
+}
+/* // -- Form para Tabuada.php */
+
+
+
