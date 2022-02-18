@@ -1,7 +1,12 @@
 <?php
-$caminho_base = realpath(__DIR__);
 
+// Obtendo o caminho relativo e chamando arquivo header.php do components 
+$caminho_base = realpath(__DIR__);
 $caminho = $caminho_base . '/../components/header.php';
+
+// Obtendo a URI 
+require_once('../global.php');
+$base = geraUrlViews();
 
 
 /**

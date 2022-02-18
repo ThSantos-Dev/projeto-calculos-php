@@ -6,19 +6,19 @@
         <label for="check" id="icone"><img src="https://i.imgur.com/RWHvwPE.png" /></label>
         <div class="barra">
             <nav>
-                <a class="link" href="../indexa.php">
+                <a class="link" href="<?=$base?>index.php">
                     <div>Home</div>
                 </a>
-                <a class="link" href="./views/calculadora.php">
+                <a class="link" href="<?=$base?>views/calculadora.php">
                     <div>Calculadora</div>
                 </a>
-                <a class="link" href="./views/media.php">
+                <a class="link" href="<?=$base?>views/media.php">
                     <div>Média</div>
                 </a>
-                <a class="link" href="./views/par-impar.php">
+                <a class="link" href="<?=$base?>views/par-impar.php">
                     <div>Par-Impar</div>
                 </a>
-                <a class="link" href="./views/tabuada.php">
+                <a class="link" href="<?=$base?>views/tabuada.php">
                     <div>Tabuada</div>
                 </a>
             </nav>

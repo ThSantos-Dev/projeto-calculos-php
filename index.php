@@ -1,7 +1,13 @@
 <?php
+
 // Obtendo o caminho relativo e chamando arquivo header.php do components 
 $caminho_base = realpath(__DIR__);
 $caminho = $caminho_base . '/components/header.php';
+
+// Obtendo a URI da pasta raiz
+require_once('./global.php');
+$base = geraUrlIndex();
+
 ?>
 
 <!DOCTYPE html>
@@ -17,35 +23,9 @@ $caminho = $caminho_base . '/components/header.php';
 </head>
 
 <body>
-<header>
-
-    <div>
-        <input type="checkbox" id="check">
-        <label for="check" id="icone"><img src="https://i.imgur.com/RWHvwPE.png" /></label>
-        <div class="barra">
-            <nav>
-                <a class="link" href="#">
-                    <div>Home</div>
-                </a>
-                <a class="link" href="/views/calculadora.php">
-                    <div>Calculadora</div>
-                </a>
-                <a class="link" href="/views/media.php">
-                    <div>Média</div>
-                </a>
-                <a class="link" href="/views/par-impar.php">
-                    <div>Par-Impar</div>
-                </a>
-                <a class="link" href="/views/tabuada.php">
-                    <div>Tabuada</div>
-                </a>
-            </nav>
-        </div>
-    </div>
-    <div id="header-title" class="">
-            <h1>Projeto Cálculos - Thales Santos </h1>
-    </div>
-</header>
+<?php
+  include_once($caminho);
+?>
 
   <main>
     <div id="titulo">

@@ -1,6 +1,13 @@
 <?php
+
+// Obtendo o caminho relativo e chamando arquivo header.php do components 
 $caminho_base = realpath(__DIR__);
 $caminho = $caminho_base . '/../components/header.php';
+
+// Obtendo a URI da pasta raiz
+require_once('../global.php');
+$base = geraUrlViews();
+
 
 // Imports
 require_once('../modules/config.php'); // Arquivo que contém as Mensagens do Sistema
